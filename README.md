@@ -297,7 +297,7 @@ const result = await backup.createBackup({ method: 'vacuum' });
 ### Basic Automated Backup Script
 
 ```javascript
-const { SQLiteBackup } = require('sqlite-backup-lib');
+const { SQLiteBackup } = require('sqlite-snap');
 
 async function dailyBackup() {
     const backup = new SQLiteBackup({
@@ -332,7 +332,7 @@ Create a backup script and schedule it with cron:
 
 ```javascript
 // backup-script.js
-const { SQLiteBackup, BackupUtils } = require('sqlite-backup-lib');
+const { SQLiteBackup, BackupUtils } = require('sqlite-snap');
 
 async function scheduledBackup() {
     const backup = new SQLiteBackup({
@@ -385,7 +385,7 @@ Add to crontab for daily backups at 2 AM:
 ### Backup with Health Monitoring
 
 ```javascript
-const { SQLiteBackup, BackupUtils } = require('sqlite-backup-lib');
+const { SQLiteBackup, BackupUtils } = require('sqlite-snap');
 
 class BackupMonitor {
     constructor(config) {
