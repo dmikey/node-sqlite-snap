@@ -1,0 +1,43 @@
+{
+    "name": "sqlite-snap",
+    "version": "1.0.0",
+    "description": "A standalone library for SQLite database backups with cleanup and verification features",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "bin": {
+        "sqlite-backup": "bin/cli.js"
+    },
+    "scripts": {
+        "test": "node test/test.js",
+        "test:ci": "npm test",
+        "example": "node examples/basic-usage.js",
+        "prepublishOnly": "npm test",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags",
+        "cli": "node bin/cli.js",
+        "demo": "npm run cli -- help"
+    },
+    "keywords": [
+        "sqlite",
+        "backup",
+        "database",
+        "sqlite3",
+        "automation",
+        "cron"
+    ],
+    "author": "Derek Anderson",
+    "license": "MIT",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/derekanderson/sqlite-backup-lib.git"
+    },
+    "bugs": {
+        "url": "https://github.com/derekanderson/sqlite-backup-lib/issues"
+    },
+    "homepage": "https://github.com/derekanderson/sqlite-backup-lib#readme"
+}

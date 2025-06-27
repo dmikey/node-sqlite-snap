@@ -1,0 +1,55 @@
+name: Dependencies Update
+
+on:
+  schedule:
+    # Run every Monday at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  update-dependencies:
+    name: Update Dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install SQLite
+      run: sudo apt-get update && sudo apt-get install -y sqlite3
+
+    - name: Check for outdated packages
+      run: |
+        npm outdated || true
+        npm audit || true
+
+    - name: Update packages
+      run: |
+        # Update package-lock.json
+        npm update
+        
+        # Run tests to ensure everything still works
+        npm test
+
+    - name: Create Pull Request
+      if: success()
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: 'chore: update dependencies'
+        title: 'chore: update dependencies'
+        body: |
+          Automated dependency update
+          
+          - Updated package-lock.json with latest compatible versions
+          - All tests passing
+          
+          Please review and merge if appropriate.
+        branch: dependencies-update
+        delete-branch: true
