@@ -1,19 +1,13 @@
-```markdown
+
 [![CI/CD Pipeline](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/ci-cd.yml)
 [![Dependencies Update](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/dependencies.yml/badge.svg)](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/dependencies.yml)
 [![Security Scan](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/ci-cd.yml/badge.svg?event=schedule)](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/ci-cd.yml)
-```
-```markdown
 [![npm version](https://badge.fury.io/js/sqlite-snap.svg)](https://badge.fury.io/js/sqlite-snap)
 [![npm downloads](https://img.shields.io/npm/dm/sqlite-snap.svg)](https://www.npmjs.com/package/sqlite-snap)
 [![npm license](https://img.shields.io/npm/l/sqlite-snap.svg)](https://www.npmjs.com/package/sqlite-snap)
-```
-```markdown
 [![Node.js supported](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
 [![SQLite](https://img.shields.io/badge/SQLite-3.x-blue.svg)](https://www.sqlite.org/)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-green.svg)](https://www.npmjs.com/package/sqlite-snap)
-```
-
 
 # SQLite Backup Library
 
