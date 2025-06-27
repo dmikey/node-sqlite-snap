@@ -2,16 +2,18 @@
 test-data/
 test-demo/
 *.log
-aidocs/
 
 # Development files
 legacy-backup-script.js
 integration-example.js
 MIGRATION.md
+aidocs/
 
-# Git and IDE files
+# Git and CI/CD files
 .git/
+.github/
 .gitignore
+package-lock.json
 .vscode/
 .idea/
 
