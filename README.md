@@ -1,11 +1,7 @@
-
-[![CI/CD Pipeline](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/ci-cd.yml)
-[![Dependencies Update](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/dependencies.yml/badge.svg)](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/dependencies.yml)
-[![Security Scan](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/ci-cd.yml/badge.svg?event=schedule)](https://github.com/derekanderson/sqlite-backup-lib/actions/workflows/ci-cd.yml)
 [![npm version](https://badge.fury.io/js/sqlite-snap.svg)](https://badge.fury.io/js/sqlite-snap)
 [![npm downloads](https://img.shields.io/npm/dm/sqlite-snap.svg)](https://www.npmjs.com/package/sqlite-snap)
 [![npm license](https://img.shields.io/npm/l/sqlite-snap.svg)](https://www.npmjs.com/package/sqlite-snap)
-[![Node.js supported](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
+[![Node.js supported](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg)](https://nodejs.org/)
 [![SQLite](https://img.shields.io/badge/SQLite-3.x-blue.svg)](https://www.sqlite.org/)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-green.svg)](https://www.npmjs.com/package/sqlite-snap)
 
@@ -27,15 +23,13 @@ A standalone, zero-dependency Node.js library for creating, managing, and verify
 ## Installation
 
 ```bash
-npm install sqlite-backup-lib
+npm install sqlite-snap
 ```
 
-Or clone this repository:
+Or install globally for CLI usage:
 
 ```bash
-git clone https://github.com/yourusername/sqlite-backup-lib.git
-cd sqlite-backup-lib
-npm install
+npm install -g sqlite-snap
 ```
 
 ## Quick Start
@@ -43,7 +37,7 @@ npm install
 ### Programmatic Usage
 
 ```javascript
-const { SQLiteBackup, BackupUtils } = require('sqlite-backup-lib');
+const { SQLiteBackup, BackupUtils } = require('sqlite-snap');
 
 // Initialize backup instance
 const backup = new SQLiteBackup({
@@ -504,7 +498,7 @@ npm run example
 
 ## Requirements
 
-- Node.js 14.0.0 or higher
+- Node.js 16.0.0 or higher
 - SQLite3 command-line tool installed and available in PATH
 - Read/write permissions for database and backup directories
 
