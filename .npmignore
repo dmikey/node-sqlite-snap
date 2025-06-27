@@ -1,6 +1,9 @@
 # Test files and directories
 test-data/
 test-demo/
+test-ci/
+backups/
+data/
 *.log
 
 # Development files
